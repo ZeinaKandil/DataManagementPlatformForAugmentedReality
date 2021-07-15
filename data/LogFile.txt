@@ -7,3 +7,34 @@ FilesCollection has been dropped successfully and all valid corresponding files 
 FilesCollection has been dropped successfully and all valid corresponding files on file system have been removed on Wed Jul 14 22:52:02 EET 2021
 FilesCollection has been dropped successfully and all valid corresponding files on file system have been removed on Wed Jul 14 22:52:33 EET 2021
 FilesCollection has been dropped successfully and all valid corresponding files on file system have been removed on Wed Jul 14 22:53:09 EET 2021
+FilesCollection has been dropped successfully and all valid corresponding files on file system have been removed on Thu Jul 15 08:42:31 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj is an invalid file path and was not added to the database on Thu Jul 15 08:43:04 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:43:04 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:43:04 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 08:43:05 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl is an invalid file Path and was not added to the database on Thu Jul 15 08:43:06 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj is an invalid file path and was not added to the database on Thu Jul 15 08:47:30 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:47:30 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:47:30 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 08:47:31 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl is an invalid file Path and was not added to the database on Thu Jul 15 08:47:32 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj is an invalid file path and was not added to the database on Thu Jul 15 08:48:02 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:48:02 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:48:02 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 08:48:02 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl is an invalid file Path and was not added to the database on Thu Jul 15 08:48:03 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj is an invalid file path and was not added to the database on Thu Jul 15 08:48:25 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:48:25 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:48:25 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 08:48:26 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl is an invalid file Path and was not added to the database on Thu Jul 15 08:48:26 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj is an invalid file path and was not added to the database on Thu Jul 15 08:49:10 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:49:10 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step is an invalid file path and was not added to the database on Thu Jul 15 08:49:10 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 08:49:11 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl is an invalid file Path and was not added to the database on Thu Jul 15 08:49:11 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj has been added to the database successfully on Thu Jul 15 08:50:10 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step has been added to the database successfully on Thu Jul 15 08:50:10 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step was not added to the database as there is another file with the same file path in the same insertMany operation on Thu Jul 15 08:50:10 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 08:50:11 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl has been added to the database successfully on Thu Jul 15 08:50:11 EET 2021
