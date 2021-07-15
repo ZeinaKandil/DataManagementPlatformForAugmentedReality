@@ -61,3 +61,6 @@ mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Update" -Dmongodb
 ```sh
 mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Delete" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
 ```
+
+Sample JSON document showing how files are stored
+![image](https://user-images.githubusercontent.com/48060956/125744258-74a06c12-286a-499d-8547-e210989c421a.png)
