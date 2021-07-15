@@ -61,3 +61,14 @@ mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Update" -Dmongodb
 ```sh
 mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Delete" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
 ```
+
+Sample JSON Document for File Storage
+{"_id":{"$oid":"60efdaa2c3c5fd756cbad71d"},
+"FilePath":"C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step",
+"FileName":"Bottle.step",
+"FileSize in (KB)":839.626953125,
+"FileDescription":"Default file description",
+"LastUpdated":{"$date":"2021-07-15T06:50:10.119Z"},
+"CreatedOn":{"$date":"2021-07-15T06:50:10.119Z"},
+"CountWrites":1,
+"CountReads":0}
