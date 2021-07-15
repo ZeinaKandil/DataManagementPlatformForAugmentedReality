@@ -18,29 +18,6 @@ public class Delete extends CRUD{
 //        deleteFile("C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj");
         dropAndDeleteAllFiles();
     }
-//        try (MongoClient mongoClient = MongoClients.create(System.getProperty("mongodb.uri"))) {
-//            MongoCollection<Document> fileCollections = sampleTrainingDB.getCollection("Just work");
-//
-//            // delete one document
-//            Bson filter = eq("_id", "60c3a2a9b228b916fed0aacc");
-////            DeleteResult result = fileCollections.deleteOne(filter);
-////            System.out.println(result);
-//
-//            // findOneAndDelete operation
-//            filter = eq("FilePath", "St5");
-////            Document doc =
-//            System.out.println(fileCollections.findOneAndDelete(filter));
-////            System.out.println(doc.toJson(JsonWriterSettings.builder().indent(true).build()));
-//
-//            // delete many documents
-////            filter = gte("_id", "60c3a2a9b228b916fed0aad1");
-////            result = fileCollections.deleteMany(filter);
-////            System.out.println(result);
-//
-//            // delete the entire collection and its metadata (indexes, chunk metadata, etc).
-////            fileCollections.drop();
-////        }
-//    }
 
     /*
     To delete one record from the Database without deleting its corresponding file (if any) in the file system.
