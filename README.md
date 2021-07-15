@@ -30,36 +30,36 @@ mvn clean compile
 - Run the `HelloMongoDB` class: 
 
 ```sh
-mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.HelloMongoDB"
+mvn compile exec:java -Dexec.mainClass="HelloMongoDB"
 ```
 - Run the `Connection` class: 
 
 ```sh
-mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Connection" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
+mvn compile exec:java -Dexec.mainClass="Connection" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
 ```
 
 - Run the `Create` class:
 
 ```sh
-mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Create" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
+mvn compile exec:java -Dexec.mainClass="Create" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
 ```
 
 - Run the `Read` class:
 
 ```sh
-mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Read" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
+mvn compile exec:java -Dexec.mainClass="Read" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
 ```
 
 - Run the `Update` class:
 
 ```sh
-mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Update" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
+mvn compile exec:java -Dexec.mainClass="Update" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
 ```
 
 - Run the `Delete` class:
 
 ```sh
-mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Delete" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
+mvn compile exec:java -Dexec.mainClass="Delete" -Dmongodb.uri="mongodb+srv://USERNAME:PASSWORD@cluster0-abcde.mongodb.net/test?w=majority"
 ```
 
 Sample JSON document showing how files are stored

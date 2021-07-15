@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "object",
+      "properties": {
+        "$oid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$oid"
+      ]
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Files Count": {
+      "type": "integer"
+    },
+    "CountTotalWrites": {
+      "type": "integer"
+    },
+    "CountTotalReads": {
+      "type": "integer"
+    },
+    "Total Files Storage Space in KB": {
+      "type": "number"
+    },
+    "Average File Size": {
+      "type": "number"
+    },
+    "FilesCollection lastUpdated": {
+      "type": "object",
+      "properties": {
+        "$date": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$date"
+      ]
+    }
+  },
+  "required": [
+    "_id",
+    "Name",
+    "Files Count",
+    "CountTotalWrites",
+    "CountTotalReads",
+    "Total Files Storage Space in KB",
+    "Average File Size",
+    "FilesCollection lastUpdated"
+  ]
+}

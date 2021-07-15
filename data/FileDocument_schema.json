@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "object",
+      "properties": {
+        "$oid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$oid"
+      ]
+    },
+    "FilePath": {
+      "type": "string"
+    },
+    "FileName": {
+      "type": "string"
+    },
+    "FileSize in (KB)": {
+      "type": "number"
+    },
+    "FileDescription": {
+      "type": "string"
+    },
+    "LastUpdated": {
+      "type": "object",
+      "properties": {
+        "$date": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$date"
+      ]
+    },
+    "CreatedOn": {
+      "type": "object",
+      "properties": {
+        "$date": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$date"
+      ]
+    },
+    "CountWrites": {
+      "type": "integer"
+    },
+    "CountReads": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "_id",
+    "FilePath",
+    "FileName",
+    "FileSize in (KB)",
+    "FileDescription",
+    "LastUpdated",
+    "CreatedOn",
+    "CountWrites",
+    "CountReads"
+  ]
+}

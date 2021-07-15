@@ -38,3 +38,8 @@ C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step has be
 C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step was not added to the database as there is another file with the same file path in the same insertMany operation on Thu Jul 15 08:50:10 EET 2021
 C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 08:50:11 EET 2021
 C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl has been added to the database successfully on Thu Jul 15 08:50:11 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj was not added to the database as there is another file with the same file path on Thu Jul 15 09:57:00 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step was not added to the database as there is another file with the same file path on Thu Jul 15 09:57:00 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step was not added to the database as there is another file with the same file path on Thu Jul 15 09:57:00 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls is an invalid file Path and was not added to the database on Thu Jul 15 09:57:00 EET 2021
+C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl was not added to the database as there is another file with the same file path on Thu Jul 15 09:57:00 EET 2021

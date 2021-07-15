@@ -1,4 +1,4 @@
-package com.mongodb.quickstart;
+package com.mongodb.AR.dataManagementPlatform;
 
 import com.mongodb.BasicDBObject;
 
