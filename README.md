@@ -5,7 +5,6 @@ This repository contains code samples for the Quick Start blog post series.
 You can read more about the Quick Start series on the [MongoDB Developer Hub](https://developer.mongodb.com/learn/).
 
 - [MongoDB & Java - CRUD Operations Tutorial](https://developer.mongodb.com/quickstart/java-setup-crud-operations)
-- [Java - Mapping POJOs](https://developer.mongodb.com/quickstart/java-mapping-pojos)
 - [Java - Aggregation Pipeline](https://developer.mongodb.com/quickstart/java-aggregation-pipeline)
 - [Java - Change Streams](https://developer.mongodb.com/quickstart/java-change-streams)
 - [Java - Client Side Field Level Encryption](https://developer.mongodb.com/quickstart/java-client-side-field-level-encryption/)
