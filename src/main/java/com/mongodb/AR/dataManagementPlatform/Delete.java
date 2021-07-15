@@ -15,8 +15,8 @@ public class Delete extends CRUD{
 
     public static void main(String[] args) {
         MongoCollection<Document> filesCollection = getFilesCollection();
-//        deleteFile("C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj");
-        dropAndDeleteAllFiles();
+        deleteFile("C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj");
+//        dropAndDeleteAllFiles();
     }
 
     /*

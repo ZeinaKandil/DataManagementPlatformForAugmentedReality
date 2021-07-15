@@ -27,7 +27,7 @@ public class Read extends CRUD {
 //        findListDocsBySize("FileSize", 3, 315);
 //        searchByFilePath("/Users/hodamoharram/Desktop/Bottle.step");
 //        searchListByCreatedOn("2021.07.15");
-//        searchByFileName("editing.pages");
+        searchByFileName("Bottle.step");
 //        searchListByCreatedOn("2021.07.15");
 
 
@@ -265,5 +265,5 @@ public class Read extends CRUD {
         Bson updateOperation = inc("CountReads", 1);
         getFilesCollection().updateMany(filter1, updateOperation);
     }
-    
+
 }

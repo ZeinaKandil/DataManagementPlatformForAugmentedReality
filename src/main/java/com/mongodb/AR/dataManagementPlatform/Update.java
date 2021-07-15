@@ -17,7 +17,7 @@ import static com.mongodb.client.model.Updates.*;
 
 public class Update extends CRUD{
     public static void main (String [] args){
-        updateFilePath( "/Users/hodamoharram/Desktop/Bottle.step", "/Users/hodamoharram/Desktop/bachelor\\?/Bottle.step");
+        updateFilePath( "C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl", "C:/Users/Zeina Kandil/Downloads/Bottle.stl");
 
 
     }
