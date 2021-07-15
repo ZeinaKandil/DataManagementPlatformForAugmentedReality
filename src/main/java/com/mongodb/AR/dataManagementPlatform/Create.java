@@ -16,8 +16,10 @@ import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.combine;
 import static com.mongodb.client.model.Updates.set;
 
-/*
-This class is concerned with all create operations in a
+/**
+ * This class is concerned with all create operations.
+ * A user can insert a single filePath with or without a file description to enter it in the database
+ * A user can insert a list of filePaths into the database
  */
 public class Create extends CRUD{
 
@@ -26,9 +28,11 @@ public class Create extends CRUD{
             MongoDatabase sampleTrainingDB = mongoClient.getDatabase("sample_training");
             MongoCollection<Document> fileCollections = sampleTrainingDB.getCollection("ARObjectsDatabase");
             String filePath = "C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.obj";
-
             String filePath2 = "C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.step";
-            ArrayList<String > filePaths = new ArrayList<>(); filePaths.add(filePath); filePaths.add(filePath2); filePaths.add(filePath2);
+            ArrayList<String > filePaths = new ArrayList<>();
+            filePaths.add(filePath);
+            filePaths.add(filePath2);
+            filePaths.add(filePath2);
             insertManyDocuments(filePaths);
             insertOneDocument("C:/Users/Zeina Kandil/Downloads/ergonomighjhgfghc-bottle-1.snapshot.2/Bottle.stls");
             insertOneDocument("C:/Users/Zeina Kandil/Downloads/ergonomic-bottle-1.snapshot.2/Bottle.stl");
@@ -37,13 +41,23 @@ public class Create extends CRUD{
         }
     }
 
-    /* Takes as input a FilePath and inserts only valid FilePaths
-    into the database with no duplicates
-    */
-    private static void insertOneDocument(String filePath){
+    /**
+     * Takes as input a FilePath and inserts only valid FilePaths
+     * into the database with no duplicates
+     * A default description is entered
+     * @param filePath
+     */
+    public static void insertOneDocument(String filePath){
         insertOneDocument(filePath, "Default file description");
     }
-    private static void insertOneDocument(String filePath, String fileDescription){
+
+    /**
+     * Takes as input a FilePath and a FileDescription and inserts only valid FilePaths
+     * into the database with no duplicates
+     * @param filePath
+     * @param fileDescription
+     */
+    public static void insertOneDocument(String filePath, String fileDescription){
         MongoCollection<Document> filesCollection = getFilesCollection();
         if(filesCollection.countDocuments(eq("FilePath", filePath)) == 0){
             Document document = saveNewFile(filePath, fileDescription);
@@ -61,10 +75,12 @@ public class Create extends CRUD{
         out.flush();
     }
 
-    /* Takes as input an Arraylist of FilePaths and inserts only valid FilePaths
-    into the database with no duplicates
-    */
-    private static void insertManyDocuments(ArrayList<String> filePaths){
+    /**
+     * Takes as input an Arraylist of FilePaths and inserts only valid FilePaths
+     * into the database with no duplicates
+     * @param filePaths
+     */
+    public static void insertManyDocuments(ArrayList<String> filePaths){
         HashSet<String> hsFilePaths = getValidFilePaths(filePaths);
         if(hsFilePaths.isEmpty())
             return;
@@ -82,38 +98,6 @@ public class Create extends CRUD{
         filesCollection.insertMany(files, new InsertManyOptions().ordered(false));
         out.flush();
     }
-
-    /* Takes as input an Arraylist of FilePaths and returns a
-    hashset of no duplicate files and no invalid filePaths
-    */
-    public static HashSet<String> getValidFilePaths(ArrayList<String> filePaths){
-        File file;
-        String filePath;
-        HashSet<String> hsFilePaths = new HashSet<>();
-        MongoCollection<Document> filesCollection = getFilesCollection();
-
-        for (int i = 0; i <filePaths.size() ; i++) {
-            filePath = filePaths.get(i);
-            file = new File(filePath);
-            if (!file.exists() || !file.isFile()){
-                out.println(filePath + " is an invalid file path and was not added to the database on " + new Date());
-                continue;
-            }
-            if(filesCollection.countDocuments(eq("FilePath", filePath)) == 0){
-                if(hsFilePaths.contains(filePath)){
-                    out.println(filePath + " was not added to the database as there is another file with the same file path in the same insertMany operation on " + new Date());
-                }else{
-                    hsFilePaths.add(filePath);
-                    out.println(filePath + " has been added to the database successfully on " + new Date());
-                }
-            }else{
-                out.println(filePath + " was not added to the database as there is another file with the same file path on " + new Date());
-            }
-        }
-        out.flush();
-        return hsFilePaths;
-    }
-
 
     private static Document saveNewFile(String filePath, String FileDescription){
         File file = new File(filePath);
@@ -136,17 +120,26 @@ public class Create extends CRUD{
         return fileDoc;
     }
 
+    /**
+     * Updates statistics takes as input a fileDocument and adds its fileSize to the statistics
+     * Also, keeps count of the writes and when the database was last updated
+     * @param fileDocument
+     */
     private static void updateStatistics(Document fileDocument){
-        //Retrieve collections
+        /**
+         * Retrieve collections
+         */
         MongoCollection<Document> statsCollection = getStatsCollection();
 
-        // Extract relevant attributes from fileDocument
+        /**
+         * Extract relevant attributes from fileDocument
+         */
         Double fileSize = (Double) fileDocument.get("FileSize in (KB)");
         Date lastUpdated = new Date();
 
-        /*
-        As create is the first operation that can be executed from the CRUD operations at the very first create call
-        there will be no stats. In this case we need to create a stats Document
+        /**
+        *As create is the first operation that can be executed from the CRUD operations at the very first create call
+        * there will be no stats. In this case we need to create a stats Document
         */
         if(statsCollection.countDocuments() == 0){
             Document statsDoc = new Document("Name", "Statistics Document")
@@ -160,8 +153,8 @@ public class Create extends CRUD{
             return;
         }
 
-        /*
-        Otherwise retrieve existing statsDocument and update it
+        /**
+         * Otherwise retrieve existing statsDocument and update it
          */
         Bson filter = eq("Name","Statistics Document");
         Document statsDoc = statsCollection.find(filter).first();

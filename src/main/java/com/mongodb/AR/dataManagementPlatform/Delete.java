@@ -11,6 +11,11 @@ import static com.mongodb.client.model.Filters.eq;
 import static com.mongodb.client.model.Updates.combine;
 import static com.mongodb.client.model.Updates.set;
 
+/**
+ * This Delete class deletes records from the database and from the file system when relevant
+ * User can delete a single document using the filePath and the user can choose to delete the file from the file system as well.
+ * User can drop the whole database and if the user so desires all associated files will be deleted from the file system too.
+ */
 public class Delete extends CRUD{
 
     public static void main(String[] args) {
@@ -19,8 +24,10 @@ public class Delete extends CRUD{
 //        dropAndDeleteAllFiles();
     }
 
-    /*
-    To delete one record from the Database without deleting its corresponding file (if any) in the file system.
+    /**
+     * To delete one record from the Database without deleting its corresponding file (if any) in the file system.
+     * @param filePath
+     * @return
      */
     public static boolean deleteRecord(String filePath){
         MongoCollection<Document> fileCollections = getFilesCollection();
@@ -41,8 +48,10 @@ public class Delete extends CRUD{
         return true;
     }
 
-    /*
-    To delete a single record from the database along with its corresponding file (if any) in the file system.
+    /**
+     * To delete a single record from the database along with its corresponding file (if any) in the file system.
+     * @param filePath
+     * @return
      */
     public static boolean deleteFile(String filePath){
         MongoCollection<Document> fileCollections = getFilesCollection();
@@ -68,9 +77,10 @@ public class Delete extends CRUD{
         return false;
     }
 
-    /*
-    Deletes all records in the filesCollection database and drops the statsCollection as well since it is no longer valid
-    Deletes Table Structure
+    /**
+     * Deletes all records in the filesCollection database and drops the statsCollection as well since it is no longer valid
+     * Deletes Table Structure
+     * @return
      */
     public static boolean drop(){
         MongoCollection<Document> fileCollections = getFilesCollection();
@@ -82,17 +92,20 @@ public class Delete extends CRUD{
         return true;
     }
 
-    /*
-    Deletes all records in the filesCollection database and their corresponding files if any and
-    drops the statsCollection as well since it is no longer valid
-    Deletes table structure
+     /* *
+     * Deletes all records in the filesCollection database and their corresponding files if any and
+     * drops the statsCollection as well since it is no longer valid
+     * Deletes table structure
+     * @return
      */
     public static boolean dropAndDeleteAllFiles(){
         MongoCollection<Document> fileCollections = getFilesCollection();
         MongoCollection<Document> statsCollection = getStatsCollection();
         statsCollection.drop();
 
-        // Delete files from file system then drop filesCollection
+        /**
+         * Delete files from file system then drop filesCollection
+         */
         for (Document document: fileCollections.find()) {
             String filePath = (String) document.get("FilePath");
             File file = new File(filePath);
@@ -104,15 +117,17 @@ public class Delete extends CRUD{
         return true;
     }
 
-    /*
-    After a single deletion statistics can be updated by simply deducting 1 file from count and decrementing the totalFileSize
+    /**
+     * After a single deletion statistics can be updated by simply deducting 1 file from count and decrementing the totalFileSize
      */
     private static void updateStatistics(Double fileSize){
-        //Retrieve collections
+        /**
+         * Retrieve collections
+         */
         MongoCollection<Document> statsCollection = getStatsCollection();
 
-        /*
-        Retrieve existing statsDocument and update it
+        /**
+         * Retrieve existing statsDocument and update it
          */
         Bson filter = eq("Name","Statistics Document");
         Document statsDoc = statsCollection.find(filter).first();
